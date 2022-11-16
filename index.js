@@ -16,7 +16,7 @@ dotenv.config();
 app.use(cors());
 app.use(express.json());
 app.use("/images", express.static(path.join(__dirname, "/images")));
-
+app.use(express.json({limit:"30mb",extended:true}))
 mongoose
   .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
