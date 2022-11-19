@@ -28,7 +28,7 @@ const PostSchema = new mongoose.Schema(
     comments:[{
       text:String,
       username:String,
-      createdAt:Date()
+      commentDate : { type : Date, default: Date.now }
   }]
   },
 
