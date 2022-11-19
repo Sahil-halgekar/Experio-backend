@@ -27,8 +27,9 @@ const PostSchema = new mongoose.Schema(
     }],
     comments:[{
       text:String,
-      username:String
-  },{ timestamps: true }]
+      username:String,
+      createdAt:new Date()
+  }]
   },
 
   { timestamps: true }
